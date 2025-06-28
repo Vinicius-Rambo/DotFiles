@@ -9,22 +9,22 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo reboot
 ```
 
-# Principais apps (APT)
+### Principais apps (APT)
 ```bash
 sudo apt install geany nitrogen ranger ulauncher neofetch nemo -y
 ```
 
-# Apps Flatpak
- ## 📁 GitHub Desktop
+### Apps Flatpak
+ #### 📁 GitHub Desktop
   ```bash
 flatpak install flathub io.github.shiftey.Desktop -y
  ```
- ## 💻 VSCode
+ #### 💻 VSCode
   ```bash
 flatpak install flathub com.visualstudio.code -y
 ```
 
-# 🎨 Aparência
+### 🎨 Aparência
 
     Cursor do mouse: Adwaita
     Aplicativos: Lavender-sea-dark
@@ -32,7 +32,7 @@ flatpak install flathub com.visualstudio.code -y
     Área de trabalho: Catppuccin-mocha-standard-Lavender-Dark
 
 <details>
- <sumary> 💻 Cinnamon </sumary>
+ <sumary> ###💻 Cinnamon </sumary>
  
  # ⚡ Extensões do Cinnamon
 
