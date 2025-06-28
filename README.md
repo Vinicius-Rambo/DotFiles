@@ -31,12 +31,14 @@ flatpak install flathub com.visualstudio.code -y
     Ícones: Zafiro-Nord-black
     Área de trabalho: Catppuccin-mocha-standard-Lavender-Dark
 
-<details> <sumary> ### 💻 Cinnamon </sumary>
- 
- ###  ⚡ Extensões do Cinnamon
+<details>
+  <summary>💻 Cinnamon</summary>
 
+  ### ⚡ Extensões do Cinnamon
+  
     gTile
     Painéis transparentes
+    
 </details>
 
 
