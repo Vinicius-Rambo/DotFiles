@@ -13,7 +13,8 @@ sudo reboot
 ```bash
 sudo apt install geany -y &&
 sudo apt install ranger -y &&
-sudo apt install neofetch -y 
+sudo apt install neofetch -y &&
+sudo apt install flameshot -y
 ```
 
 ### Ulauncher
