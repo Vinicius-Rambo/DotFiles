@@ -14,7 +14,8 @@ sudo reboot
 sudo apt install geany -y &&
 sudo apt install ranger -y &&
 sudo apt install neofetch -y &&
-sudo apt install flameshot -y
+sudo apt install flameshot -y &&
+sudo apt-get install g++ -y
 ```
 
 ### Ulauncher
