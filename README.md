@@ -9,7 +9,7 @@ sudo apt upgrade && sudo apt update -y
 ```bash
 sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo -y
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo reboot
 ```
 
@@ -29,6 +29,11 @@ echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
 sudo apt update && sudo apt install ulauncher
 ```
 lembre-se de sempre deixar ele em autostart.
+### trocar a o gestor de sessão:
+ ```bash
+    sudo apt install gdm3 -y
+    sudo reboot 
+ ```   
 
 
 ### Aparência
