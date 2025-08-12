@@ -57,6 +57,21 @@ lembre-se de sempre deixar ele em autostart.
       sudo apt update
       sudo apt install code -y
   ```
+  ## Vscode (Extensões)
+  ### instalar
+      C/C++               - Microsoft
+      C/C++ extenson pack - Microsoft
+      c/c++ Runner        - franneck94
+      CMake Tools         - Microsoft
+      HTML CSS Support    - ecmel
+      Live Server         - Ritwick Dey
+      Tokyo Night         - enkia  
+      PHP intelephense    - Ben Mewburn
+
+  ### Desativar:
+      GithubCopilot       -Microsoft
+      @builtin php        
+
   ### Java (OpenJDK completo)
    ```bash
    sudo apt install default-jdk -y
@@ -69,6 +84,13 @@ lembre-se de sempre deixar ele em autostart.
   ```bash
   sudo apt install build-essential gdb -y
   ```
+  ### PHP (LAMP)
+  ```bash
+  sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y
+  sudo systemctl enable apache2 mariadb
+  sudo systemctl start apache2 mariadb
+  ```
+
   ### Arduino (IDE)
   ```bash
   sudo apt install arduino -y
@@ -110,6 +132,12 @@ lembre-se de sempre deixar ele em autostart.
   ### ⚡ Extensões do Cinnamon
     gTile
     Painéis transparentes
+
+  ### Aparência
+    Cursor do mouse: Adwaita
+    Aplicativos: Lavender-sea-dark
+    Ícones: Zafiro-Nord-black
+    Área de trabalho: Catppuccin-mocha-standard-Lavender-Dark
 </details>
 
 
