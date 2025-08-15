@@ -90,6 +90,10 @@ lembre-se de sempre deixar ele em autostart.
   sudo systemctl enable apache2 mariadb
   sudo systemctl start apache2 mariadb
   ```
+  ### PostgreSQL (LAMP)
+  ```bash
+  sudo apt install postgresql -y 
+  ```
 
   ### Arduino (IDE)
   ```bash
