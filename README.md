@@ -60,7 +60,7 @@ lembre-se de sempre deixar ele em autostart.
   ## Vscode (Extensões)
   ### instalar
       C/C++               - Microsoft
-      C/C++ extenson pack - Microsoft
+      C/C++ Extension Pack - Microsoft
       c/c++ Runner        - franneck94
       CMake Tools         - Microsoft
       HTML CSS Support    - ecmel
@@ -89,11 +89,14 @@ lembre-se de sempre deixar ele em autostart.
   sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y
   sudo systemctl enable apache2 mariadb
   sudo systemctl start apache2 mariadb
+  sudo chown -R $USER:$USER /var/www/html
+
   ```
   ### PostgreSQL (LAMP)
   ```bash
   sudo apt install postgresql -y 
   ```
+  
 
   ### Arduino (IDE)
   ```bash
