@@ -15,7 +15,7 @@ sudo reboot
 
 ### Principais apps (APT)
 ```bash
-sudo apt install ranger neofetch flameshot g++ git -y
+sudo apt install ranger fastfetch flameshot g++ git -y
 ```
 
 ### Ulauncher
@@ -104,7 +104,7 @@ lembre-se de sempre deixar ele em autostart.
   ```
   ### Geany (IDE)
   ```bash
-  sudo apt instal geany -y
+  sudo apt install geany -y
   ```
 
 </details>
@@ -138,7 +138,8 @@ lembre-se de sempre deixar ele em autostart.
 
   ### ⚡ Extensões do Cinnamon
     gTile
-    Painéis transparentes
+    Painéis transparentes (vermelho)
+    Cinnamon-Screenshot
 
   ### Aparência
     Cursor do mouse: Adwaita
