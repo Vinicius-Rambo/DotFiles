@@ -128,24 +128,16 @@ sudo apt install ranger fastfetch flameshot g++ git -y
 
   ### Todas.
    ```bash
-      sudo apt install wget gpg -y
-      wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-      sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-      sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
-      https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-      rm -f packages.microsoft.gpg
-      sudo apt update
-      sudo apt install code -y
-      sudo apt install default-jdk -y
-      sudo apt install python3 python3-pip python3-venv python3-dev build-essential -y
-      sudo apt install build-essential gdb -y
-      sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y
-      sudo systemctl enable apache2 mariadb
-      sudo systemctl start apache2 mariadb
-      sudo chmod 777 /var/www/html
-      sudo apt install postgresql -y 
-      sudo apt install geany -y
-      sudo apt micro -y
+   sudo apt install -y wget gpg
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+   sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
+   https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+   rm -f packages.microsoft.gpg
+   sudo apt update
+   sudo apt install -y code default-jdk python3 python3-pip python3-venv python3-dev build-essential gdb apache2 mariadb-server php libapache2-mod-php php-mysql postgresql geany micro
+   sudo systemctl enable --now apache2 mariadb
+   sudo chmod 777 /var/www/html
   ```
 </details>
 
