@@ -31,6 +31,12 @@ Este repositório é uma coleção de configurações que utilizo no meu computa
   - Deve funcionar com qualquer distro derivada dos dois.
   - Git.
 
+### Linux Power Toys 
+```bash
+yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/psygreg/linuxtoys/master/install.sh)"
+```
+Uma ferramenta de auxilio para instalação de apps.
+
 # Debian 🌀
 
 ### Atualize o sistema e baixa o Git - Debian
@@ -60,7 +66,7 @@ lembre-se de sempre deixar ele em autostart.
 
 ### Principais apps (APT) - Debian
 ```bash
-sudo apt install ranger fastfetch flameshot g++ git -y
+sudo apt install ranger fastfetch flameshot  -y
 ```
 
 
@@ -297,4 +303,10 @@ flatpak install flathub org.prismlauncher.PrismLauncher -y
 ### Roblox (Sober)
 ```bash
 flatpak install flathub org.vinegarhq.Sober -y
+```
 </details>
+
+# DE`s
+
+<details>
+  <summary> <h2> Cinnamon </h2> </summary>
