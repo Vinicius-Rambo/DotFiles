@@ -8,8 +8,7 @@
 - [Instale o Flatpak](#instale-o-flatpak---debian)
 - [Ulauncher](#ulauncher-repositorio-oficial---debian)
 - [Principais apps](#principais-apps-apt---debian)
-- [Programação](#programação-ides-e-linguagems---debian)
-- [Jogos](#jogos-principais-launchers---debian)
+
 
 <div></div>
 
@@ -18,8 +17,7 @@
 - [Flatpak](#flatpak---opensuse)
 - [Ulauncher](#ulaucherflatpack---opensuse)
 - [Principais apps](#principais-apps---opensuse)
-- [Programação](#programação-ides-e-linguagems---opensuse)
-- [Jogos](#jogos-principais-launchers---opensuse)
+
 
 
 ## Visão Geral 
