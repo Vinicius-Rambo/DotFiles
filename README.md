@@ -3,22 +3,24 @@
 > Minhas configurações
 
 ## 📋 Tópicos
-  ### Debian 13
-- [Atualize o sistema e Git](#atualize-o-sistema-e-git---debian)
-- [Flatpak](#flatpak---debian)
-- [Ulauncher](#ulauncher---debian)
-- [Principais apps](#principais-apps---debian)
-- [Programação](#programação---debian)
-- [Jogos](#jogos---debian)
-<div> </div>
+### Debian 🌀
+- [Atualize o sistema e baixa o Git](#atualize-o-sistema-e-baixa-o-git---debian)
+- [Instale o Flatpak](#instale-o-flatpak---debian)
+- [Ulauncher](#ulauncher-repositorio-oficial---debian)
+- [Principais apps](#principais-apps-apt---debian)
+- [Programação](#programação-ides-e-linguagems---debian)
+- [Jogos](#jogos-principais-launchers---debian)
 
-  ### OpenSuse
-- [Atualize o sistema e Git](#opensuse---atualize-o-sistema-e-git)
-- [Flatpak](#opensuse---flatpak)
-- [Ulauncher](#opensuse---ulauncher)
-- [Principais apps](#opensuse---principais-apps)
-- [Programação](#opensuse---programação)
-- [Jogos](#opensuse---jogos)
+<div></div>
+
+### OpenSuse 🦎
+- [Atualize o sistema e baixa o Git](#atualize-o-sistema-e-baixa-o-git---opensuse)
+- [Flatpak](#flatpak---opensuse)
+- [Ulauncher](#ulaucherflatpack---opensuse)
+- [Principais apps](#principais-apps---opensuse)
+- [Programação](#programação-ides-e-linguagems---opensuse)
+- [Jogos](#jogos-principais-launchers---opensuse)
+
 
 ## Visão Geral 
 
