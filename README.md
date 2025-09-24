@@ -310,3 +310,15 @@ flatpak install flathub org.vinegarhq.Sober -y
 
 <details>
   <summary> <h2> Cinnamon </h2> </summary>
+
+  ## Prints
+
+  <p align="center">
+    <img src="./Debian/prints/print1.png" width="350">
+    <img src="./Debian/prints/print2.png" width="350">
+    <img src="./Debian/prints/print3.png" width="350">
+    <img src="./Debian/prints/print4.png" width="350">
+    <img src="./Debian/prints/print5.png" width="350">
+  </p>
+
+</details>
