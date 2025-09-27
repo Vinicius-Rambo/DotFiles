@@ -330,3 +330,32 @@ flatpak install flathub org.vinegarhq.Sober -y
   </p>
 
 </details>
+
+
+<details>
+  <summary> <h2> Cosmic </h2> </summary>
+
+## Atalhos do COSMIC
+
+### Navegação
+- **Menu de aplicativos**: `Super`
+- **Abrir lançador**: `Super + Space` *(modificado)*
+
+### Janelas
+- **Mover entre janelas**: `Super + Setas`
+- **Mover as janelas**: `Super + Shift + Setas`
+- **Maximizar janela**: `Super + M`
+- **Minimizar janela**: `Super + N` *(modificado)*
+- **Redimensionar**: `Super + R`
+
+### Áreas de trabalho
+- **Mover pelas áreas de trabalho**: `Super + Ctrl + Setas`
+- **Mover janelas para outras áreas**: `Super + Ctrl + Shift + Setas`
+
+### Aplicativos
+- **Abrir terminal**: `Super + T`
+- **Abrir navegador**: `Super + B`
+
+
+
+  </details>
