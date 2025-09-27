@@ -247,6 +247,15 @@ sudo zypper install postgresql-server postgresql-contrib -y
 sudo systemctl enable postgresql
 sudo systemctl start postgresql
 ```
+### Config PSQL
+```bash
+sudo -i -u postgres
+psql 
+```
+```psql
+ALTER USER postgres PASSWORD 'senha';
+```
+
 
 ### Geany
 ```bash
@@ -307,7 +316,6 @@ flatpak install flathub org.vinegarhq.Sober -y
 </details>
 
 # DE`s
-
 <details>
   <summary> <h2> Cinnamon </h2> </summary>
 
