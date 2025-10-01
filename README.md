@@ -18,7 +18,9 @@
 - [Ulauncher](#ulaucherflatpack---opensuse)
 - [Principais apps](#principais-apps---opensuse)
 
-
+### Geral 
+- [HomeBrew o gerenciador de aplicativos do Mac](https://brew.sh/)
+- [Wiki do PSQL](https://www.postgresql.org/docs/current/app-psql.html)
 
 ## Visão Geral 
 
@@ -36,6 +38,26 @@ Este repositório é uma coleção de configurações que utilizo no meu computa
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/psygreg/linuxtoys/master/install.sh)"
 ```
 Uma ferramenta de auxilio para instalação de apps.
+
+<details> <summary> <h2> Repositorios e Gerenciadores </h2> </summary>
+
+### Flatseal um gerenciador de permissões para flatpack. 
+```bash
+flatpak install flathub com.github.tchx84.Flatseal
+```
+
+### App imagepool um gerenciador de permissões para Appimage.
+```bash
+flatpak install flathub io.github.prateekmedia.appimagepool
+```
+
+### Cargo um gerenciador de permissões para Rust apps.
+```bash
+curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
+```
+É necessario ter Flatpack habilitado confira em seu sistema.
+</details>
 
 # Debian 🌀
 
@@ -143,6 +165,10 @@ sudo apt install ranger fastfetch flameshot  -y
    sudo systemctl enable --now apache2 mariadb
    sudo chmod 777 /var/www/html
   ```
+</details>
+
+
+  
 </details>
 
 <details> <summary> <h3> Jogos (principais launchers) - Debian </summary>
@@ -330,7 +356,6 @@ flatpak install flathub org.vinegarhq.Sober -y
   </p>
 
 </details>
-
 
 <details>
   <summary> <h2> Cosmic </h2> </summary>
