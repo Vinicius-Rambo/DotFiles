@@ -133,16 +133,64 @@ sudo apt install ranger fastfetch flameshot  -y
   ```
   ### PHP (LAMP)
   ```bash
-  sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y
-  sudo systemctl enable apache2 mariadb
-  sudo systemctl start apache2 mariadb
+  sudo apt update
+  sudo apt install -y apache2 php php-mysql php-mbstring php-zip php-gd php-json php-curl mariadb-server phpmyadmin
+  sudo phpenmod mbstring
+  sudo systemctl restart apache2
   sudo chmod 777 /var/www/html
-
   ```
+
+  ### PHPmyAdmin 
+  ```bash
+  sudo systemctl stop mariadb
+  sudo pkill -9 mysql
+  sudo pkill -9 mariadb
+  sudo mysqld_safe --skip-grant-tables --skip-networking &
+  sleep 5
+  mysql -u root <<EOF
+  FLUSH PRIVILEGES;
+  UPDATE mysql.user SET password = PASSWORD('bancodedados') WHERE user='root' AND host='localhost';
+  UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE user='root' AND host='localhost';
+  FLUSH PRIVILEGES;
+  EOF
+  sudo pkill -f mysqld
+  sudo systemctl start mariadb
+  sudo sed -i "/auth_type/c\$cfg['Servers'][\$i]['auth_type'] = 'cookie';" /etc/phpmyadmin/config.inc.php
+  sudo sed -i "/Servers\]\[\$i\]\['auth_type'\]/a \$cfg['Servers'][\$i]['AllowRoot'] = true;" /etc/phpmyadmin/config.inc.php
+  sudo systemctl restart apache2
+  ```
+
   ### PostgreSQL 
   ```bash
-  sudo apt install postgresql -y 
+  sudo apt install postgresql -y
+
   ```
+
+  ### PGadmin
+  ```bash
+  curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
+  sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
+  sudo apt update
+  sudo apt install pgadmin4
+  ```
+
+  ### Nvim 
+  ´´´bash
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+  sudo rm -rf /opt/nvim-linux-x86_64
+  sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+  rm nvim-linux-x86_64.tar.gz
+  echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
+  source ~/.bashrc
+  
+  mkdir -p ~/.local/share/fonts
+  cd ~/.local/share/fonts
+  wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+  unzip JetBrainsMono.zip
+  rm JetBrainsMono.zip
+  fc-cache -fv
+  ´´´
+
 
   ### Geany (IDE)
   ```bash
@@ -150,7 +198,9 @@ sudo apt install ranger fastfetch flameshot  -y
   ```
 
   ### Micro (Text Editor)
+  ```bash
   sudo apt install micro -y
+  ```
 
   ### Todas.
    ```bash
