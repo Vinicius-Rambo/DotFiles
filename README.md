@@ -243,7 +243,7 @@ git pull
 
   </details>
 
-  <Summary> <details> <h2> Editores de Codigo <h2> 
+  <details> <Summary> <h2> Editores de Codigo <h2> 
 
   ### Nvim 
   ```bash
