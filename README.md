@@ -159,6 +159,10 @@ sudo apt install ranger fastfetch flameshot  -y
   sudo sed -i "/Servers\]\[\$i\]\['auth_type'\]/a \$cfg['Servers'][\$i]['AllowRoot'] = true;" /etc/phpmyadmin/config.inc.php
   sudo systemctl restart apache2
   ```
+  ### Composer (Gereciador de dependecias do PHP)
+  ```bash
+  sudo apt install composer -y
+  ```
 
   ### PostgreSQL 
   ```bash
@@ -175,7 +179,7 @@ sudo apt install ranger fastfetch flameshot  -y
   ```
 
   ### Nvim 
-  ´´´bash
+  ```bash
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
   sudo rm -rf /opt/nvim-linux-x86_64
   sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
@@ -190,8 +194,6 @@ sudo apt install ranger fastfetch flameshot  -y
   rm JetBrainsMono.zip
   fc-cache -fv
   ´´´
-
-
   ### Geany (IDE)
   ```bash
   sudo apt install geany -y
@@ -216,7 +218,6 @@ sudo apt install ranger fastfetch flameshot  -y
    sudo chmod 777 /var/www/html
   ```
 </details>
-
 
   
 </details>
