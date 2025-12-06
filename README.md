@@ -90,6 +90,23 @@ lembre-se de sempre deixar ele em autostart.
 ```bash
 sudo apt install ranger fastfetch flameshot  -y
 ```
+### Github CLI (Cliente do github no terminal)
+
+#### Instalar o Gh
+```bash
+sudo apt install gh -y 
+```
+#### Login fazer o login, usando o browser.
+```bash
+gh auth login 
+```
+
+#### Clonar um repositório dentro de uma pasta.
+```bash
+gh repo clone usuario/repositorio 
+```
+
+
 
 
 <details> <summary> <h3> Programação (IDE's e Linguagems) - Debian  </summary>
@@ -428,10 +445,12 @@ flatpak install flathub org.vinegarhq.Sober -y
 ### Áreas de trabalho
 - **Mover pelas áreas de trabalho**: `Super + Ctrl + Setas`
 - **Mover janelas para outras áreas**: `Super + Ctrl + Shift + Setas`
+- **Visualizar áreas de trabalho**: `Super + W`
 
 ### Aplicativos
 - **Abrir terminal**: `Super + T`
 - **Abrir navegador**: `Super + B`
+- **Janela de Terminal**: `Super + Shift + t` 
 
 
 
