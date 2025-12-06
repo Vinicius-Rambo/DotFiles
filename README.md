@@ -482,8 +482,6 @@ flatpak install flathub org.vinegarhq.Sober -y
 ### Aplicativos
 - **Abrir terminal**: `Super + T`
 - **Abrir navegador**: `Super + B`
-- **Janela de Terminal**: `Super + Shift + t` 
-
-
+- **Janela de Terminal**: `Ctrl + Shift + t` 
 
   </details>
