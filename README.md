@@ -110,6 +110,16 @@ gh repo clone usuario/repositorio
 ```bash
 git status
 ```
+#### + Adicionar alterções 
+Adicionar tudo:
+```bash
+git add .
+```
+Adicionar arquivo especíico:
+```bash
+git add exemplo.txt 
+```
+
 #### 💬 Commit
 ```bash
 git commit -m "mensagem"
