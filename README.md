@@ -263,7 +263,6 @@ git pull
   ```bash
   sudo apt install micro -y
   ```
-  </details>
 </details>
 
   
