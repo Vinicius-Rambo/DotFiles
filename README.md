@@ -231,7 +231,6 @@ git pull
   ### PostgreSQL 
   ```bash
   sudo apt install postgresql -y
-
   ```
 
   ### PGadmin
@@ -241,6 +240,7 @@ git pull
   sudo apt update
   sudo apt install pgadmin4
   ```
+
   </details>
 
   <Summary> <details> <h2> Editores de Codigo <h2> 
@@ -271,7 +271,7 @@ git pull
   ```bash
   sudo apt install micro -y
   ```
-</details>
+  </details>
 
 <details> <summary> <h2> Jogos (principais launchers) - Debian </summary>
 
