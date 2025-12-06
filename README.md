@@ -233,7 +233,9 @@ git pull
   sudo apt update
   sudo apt install pgadmin4
   ```
-  </summary>
+  </details>
+
+  <Summary> <details> <h2> Editores de Codigo <h2> <details>
 
   ### Nvim 
   ```bash
@@ -261,13 +263,12 @@ git pull
   ```bash
   sudo apt install micro -y
   ```
-
+  </details>
 </details>
 
   
-</details>
 
-<details> <summary> <h3> Jogos (principais launchers) - Debian </summary>
+<details> <summary> <h2> Jogos (principais launchers) - Debian </summary>
 
   ### Steam (ativa os repositorios non-free e baixa steam)
   ```bash
