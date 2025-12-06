@@ -24,13 +24,14 @@
 
 ## Visão Geral 
 
-Este repositório é uma coleção de configurações que utilizo no meu computador Linux. Serve como um guia para deixar seu sistema semelhante ao meu, abrangendo temas, ícones, ajustes de aparência e instalação de aplicativos, algumas coisas não faço uso, mas deixo como ajuda..
+Este repositório é uma coleção de configurações que utilizo no meu computador Linux. Serve como um guia para deixar seu sistema semelhante ao meu, abrangendo temas, ícones, ajustes de aparência e instalação de aplicativos, algumas coisas não faço uso, mas deixo como ajuda, está em constante atualização.
 
 ## Requisitos
 
   - Linux sendo testado para o Debian 13 e OpenSuse.
   - Opensuse utilizado é o Tumbleweed, mas funciona com o Leap. 
   - Deve funcionar com qualquer distro derivada dos dois.
+  - Minimo conhecimento de Bash.
   - Git.
 
 ### Linux Power Toys 
@@ -56,12 +57,12 @@ flatpak install flathub io.github.prateekmedia.appimagepool
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 ```
-É necessario ter Flatpack habilitado confira em seu sistema.
+É necessario ter Flatpack habilitado confira em seu sistema, e também o Curl e o Git
 </details>
 
 # Debian 🌀
 
-### Atualize o sistema e baixa o Git - Debian
+### Atualize o sistema e baixa o Git e o Curl - Debian
 ```bash
 sudo apt upgrade && sudo apt update -y 
 sudo apt install git curl -y
@@ -90,7 +91,7 @@ lembre-se de sempre deixar ele em autostart.
 ```bash
 sudo apt install ranger fastfetch flameshot  -y
 ```
-### Github CLI (Cliente do github no terminal)
+<details> <summary> <h2> Github CLI (Cliente do github no terminal) - Debian  </summary> 
 
 #### Instalar o Gh
 ```bash
@@ -137,11 +138,9 @@ git push -u origin nome-da-branch
 ```bash
 git pull
 ```
+</details>
 
-
-
-
-<details> <summary> <h3> Programação (IDE's e Linguagems) - Debian  </summary>
+<details> <summary> <h2> Vscode - Debian  </summary>
     
   ### Vscode (repositorio Oficial)
   ```bash
@@ -167,6 +166,7 @@ git pull
   code --disable-extension GitHub.copilot
   code --disable-extension @builtin php
   ```
+  </details>
 
   ### Java (OpenJDK completo)
    ```bash
@@ -180,6 +180,9 @@ git pull
   ```bash
   sudo apt install build-essential gdb -y
   ```
+
+  <details> <summary> <h2> PHP - Debian  </summary>
+  
   ### PHP (LAMP)
   ```bash
   sudo apt update
@@ -213,6 +216,10 @@ git pull
   sudo apt install composer -y
   ```
 
+  </details>
+
+  <details> <summary> <h2> PostgreSQL - Debian  </summary>
+
   ### PostgreSQL 
   ```bash
   sudo apt install postgresql -y
@@ -226,6 +233,7 @@ git pull
   sudo apt update
   sudo apt install pgadmin4
   ```
+  </summary>
 
   ### Nvim 
   ```bash
@@ -254,19 +262,6 @@ git pull
   sudo apt install micro -y
   ```
 
-  ### Todas.
-   ```bash
-   sudo apt install -y wget gpg
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-   sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
-   https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-   rm -f packages.microsoft.gpg
-   sudo apt update
-   sudo apt install -y code default-jdk python3 python3-pip python3-venv python3-dev build-essential gdb apache2 mariadb-server php libapache2-mod-php php-mysql postgresql geany micro
-   sudo systemctl enable --now apache2 mariadb
-   sudo chmod 777 /var/www/html
-  ```
 </details>
 
   
