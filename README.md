@@ -243,9 +243,10 @@ git pull
 
   </details>
 
-  <details> <Summary> <h2> Editores de Codigo <h2> 
+  <details> <Summary> <h2> Editores de Codigo <h2> <Summary> 
 
   ### Nvim 
+
   ```bash
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
   sudo rm -rf /opt/nvim-linux-x86_64
