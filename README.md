@@ -91,7 +91,6 @@ lembre-se de sempre deixar ele em autostart.
 ```bash
 sudo apt install ranger fastfetch flameshot  -y
 ```
-
 <details> <summary> <h2> Github CLI (Cliente do github no terminal) - Debian  </summary> 
 
 #### Instalar o Gh
@@ -144,7 +143,7 @@ git pull
 </details>
 
 <details> <summary> <h2> Vscode - Debian  </summary>
-    
+
   ### Vscode (repositorio Oficial)
   ```bash
       sudo apt install wget gpg -y
@@ -170,7 +169,6 @@ git pull
   code --disable-extension GitHub.copilot
   code --disable-extension @builtin php
   ```
-
   </details>
 
   ### Java (OpenJDK completo)
@@ -187,9 +185,8 @@ git pull
   ```bash
   sudo apt install python3 python3-pip python3-venv python3-dev build-essential -y
   ```
-
   <details> <summary> <h2> PHP - Debian  </summary>
-  
+
   ### PHP (LAMP)
   ```bash
   sudo apt update
