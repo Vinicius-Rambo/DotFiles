@@ -91,6 +91,7 @@ lembre-se de sempre deixar ele em autostart.
 ```bash
 sudo apt install ranger fastfetch flameshot  -y
 ```
+
 <details> <summary> <h2> Github CLI (Cliente do github no terminal) - Debian  </summary> 
 
 #### Instalar o Gh
@@ -111,6 +112,7 @@ gh repo clone usuario/repositorio
 ```bash
 git status
 ```
+
 #### + Adicionar alterções 
 Adicionar tudo:
 ```bash
@@ -125,6 +127,7 @@ git add exemplo.txt
 ```bash
 git commit -m "mensagem"
 ```
+
 #### Push (enviar para o Github)
 ```bash
 git push
@@ -153,6 +156,7 @@ git pull
       sudo apt update
       sudo apt install code -y
   ```
+
   ## Vscode (Extensões)
   ```bash
   code --install-extension ms-vscode.cpptools
@@ -166,19 +170,22 @@ git pull
   code --disable-extension GitHub.copilot
   code --disable-extension @builtin php
   ```
+
   </details>
 
   ### Java (OpenJDK completo)
    ```bash
    sudo apt install default-jdk -y
    ```
-  ### Python 
-  ```bash
-  sudo apt install python3 python3-pip python3-venv python3-dev build-essential -y
-  ```
+
   ### C/C++ 
   ```bash
   sudo apt install build-essential gdb -y
+  ```
+
+  ### Python 
+  ```bash
+  sudo apt install python3 python3-pip python3-venv python3-dev build-essential -y
   ```
 
   <details> <summary> <h2> PHP - Debian  </summary>
@@ -211,6 +218,7 @@ git pull
   sudo sed -i "/Servers\]\[\$i\]\['auth_type'\]/a \$cfg['Servers'][\$i]['AllowRoot'] = true;" /etc/phpmyadmin/config.inc.php
   sudo systemctl restart apache2
   ```
+
   ### Composer (Gereciador de dependecias do PHP)
   ```bash
   sudo apt install composer -y
@@ -235,7 +243,7 @@ git pull
   ```
   </details>
 
-  <Summary> <details> <h2> Editores de Codigo <h2> <details>
+  <Summary> <details> <h2> Editores de Codigo <h2> 
 
   ### Nvim 
   ```bash
@@ -265,8 +273,6 @@ git pull
   ```
 </details>
 
-  
-
 <details> <summary> <h2> Jogos (principais launchers) - Debian </summary>
 
   ### Steam (ativa os repositorios non-free e baixa steam)
@@ -288,6 +294,7 @@ git pull
   ```bash
   flatpak install flathub org.vinegarhq.Sober
   ```
+
 </details>
 
 
