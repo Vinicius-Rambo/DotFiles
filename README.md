@@ -64,7 +64,7 @@ source $HOME/.cargo/env
 ### Atualize o sistema e baixa o Git - Debian
 ```bash
 sudo apt upgrade && sudo apt update -y 
-sudo apt install git -y
+sudo apt install git curl -y
 ```
 
 ### 📦 Instale o Flatpak - Debian
