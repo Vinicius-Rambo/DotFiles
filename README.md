@@ -106,6 +106,28 @@ gh auth login
 gh repo clone usuario/repositorio 
 ```
 
+#### Checar alterações 
+```bash
+git status
+```
+#### 💬 Commit
+```bash
+git commit -m "mensagem"
+```
+#### Push (enviar para o Github)
+```bash
+git push
+```
+caso seja o primeiro push de uma branch:
+```bash
+git push -u origin nome-da-branch
+```
+
+#### Pull (puxar alterações do Github)
+```bash
+git pull
+```
+
 
 
 
