@@ -193,7 +193,7 @@ sudo apt install ranger fastfetch flameshot  -y
   unzip JetBrainsMono.zip
   rm JetBrainsMono.zip
   fc-cache -fv
- ```bash
+  ```
 
   ### Geany (IDE)
   ```bash
