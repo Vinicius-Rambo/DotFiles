@@ -4,190 +4,190 @@
 
 ## 📋 Tópicos
 ### Debian 🌀
-    - [Atualize o sistema e baixa o Git](#atualize-o-sistema-e-baixa-o-git---debian)
-    - [Instale o Flatpak](#instale-o-flatpak---debian)
-    - [Ulauncher](#ulauncher-repositorio-oficial---debian)
-    - [Principais apps](#principais-apps-apt---debian)
+- [Atualize o sistema e baixa o Git](#atualize-o-sistema-e-baixa-o-git---debian)
+- [Instale o Flatpak](#instale-o-flatpak---debian)
+- [Ulauncher](#ulauncher-repositorio-oficial---debian)
+- [Principais apps](#principais-apps-apt---debian)
 
 
     <div></div>
 
 ### OpenSuse 🦎
-    - [Atualize o sistema e baixa o Git](#atualize-o-sistema-e-baixa-o-git---opensuse)
-    - [Flatpak](#flatpak---opensuse)
-    - [Ulauncher](#ulaucherflatpack---opensuse)
-    - [Principais apps](#principais-apps---opensuse)
+- [Atualize o sistema e baixa o Git](#atualize-o-sistema-e-baixa-o-git---opensuse)
+- [Flatpak](#flatpak---opensuse)
+- [Ulauncher](#ulaucherflatpack---opensuse)
+- [Principais apps](#principais-apps---opensuse)
 
 ### Geral 
-    - [HomeBrew o gerenciador de aplicativos do Mac](https://brew.sh/)
-    - [Wiki do PSQL](https://www.postgresql.org/docs/current/app-psql.html)
+- [HomeBrew o gerenciador de aplicativos do Mac](https://brew.sh/)
+- [Wiki do PSQL](https://www.postgresql.org/docs/current/app-psql.html)
 
 ## Visão Geral 
 
-    Este repositório é uma coleção de configurações que utilizo no meu computador Linux. Serve como um guia para deixar seu sistema semelhante ao meu, abrangendo temas, ícones, ajustes de aparência e instalação de aplicativos, algumas coisas não faço uso, mas deixo como ajuda, está em constante atualização.
+Este repositório é uma coleção de configurações que utilizo no meu computador Linux. Serve como um guia para deixar seu sistema semelhante ao meu, abrangendo temas, ícones, ajustes de aparência e instalação de aplicativos, algumas coisas não faço uso, mas deixo como ajuda, está em constante atualização.
 
 ## Requisitos
 
-      - Linux sendo testado para o Debian 13 e OpenSuse.
-      - Opensuse utilizado é o Tumbleweed, mas funciona com o Leap. 
-      - Deve funcionar com qualquer distro derivada dos dois.
-      - Minimo conhecimento de Bash.
-      - Git.
+- Linux sendo testado para o Debian 13 e OpenSuse.
+- Opensuse utilizado é o Tumbleweed, mas funciona com o Leap. 
+- Deve funcionar com qualquer distro derivada dos dois.
+- Minimo conhecimento de Bash.
+- Git.
 
 ### Linux Power Toys 
-    ```bash
-    yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/psygreg/linuxtoys/master/install.sh)"
-    ```
-    Uma ferramenta de auxilio para instalação de apps.
+ ```bash
+ yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/psygreg/linuxtoys/master/install.sh)"
+ ```
+ Uma ferramenta de auxilio para instalação de apps.
 
-    <details> <summary> <h2> Repositorios e Gerenciadores </h2> </summary>
+ <details> <summary> <h2> Repositorios e Gerenciadores </h2> </summary>
 
 ### Flatseal um gerenciador de permissões para flatpack. 
-    ```bash
-    flatpak install flathub com.github.tchx84.Flatseal
-    ```
+ ```bash
+ flatpak install flathub com.github.tchx84.Flatseal
+ ```
 
 ### App imagepool um gerenciador de permissões para Appimage.
-    ```bash
-    flatpak install flathub io.github.prateekmedia.appimagepool
-    ```
+ ```bash
+ flatpak install flathub io.github.prateekmedia.appimagepool
+ ```
 
 ### Cargo um gerenciador de permissões para Rust apps.
-    ```bash
-    curl https://sh.rustup.rs -sSf | sh
-    source $HOME/.cargo/env
-    ```
-    É necessario ter Flatpack habilitado confira em seu sistema, e também o Curl e o Git
-    </details>
+ ```bash
+ curl https://sh.rustup.rs -sSf | sh
+ source $HOME/.cargo/env
+ ```
+ É necessario ter Flatpack habilitado confira em seu sistema, e também o Curl e o Git
+ </details>
 
 # Debian 🌀
 
 ### Atualize o sistema e baixa o Git e o Curl - Debian
-    ```bash
-    sudo apt upgrade && sudo apt update -y 
-    sudo apt install git curl -y
-    ```
+ ```bash
+ sudo apt upgrade && sudo apt update -y 
+ sudo apt install git curl -y
+ ```
 
 ### 📦 Instale o Flatpak - Debian
-    ```bash
-    sudo apt install flatpak -y
-    sudo apt install gnome-software-plugin-flatpak -y
-    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    ```
+ ```bash
+ sudo apt install flatpak -y
+ sudo apt install gnome-software-plugin-flatpak -y
+ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+ ```
 
 ### Ulauncher (repositorio Oficial) - Debian
-    ```bash
-    sudo apt update && sudo apt install -y gnupg
-    gpg --keyserver keyserver.ubuntu.com --recv 0xfaf1020699503176
-    gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive-keyring.gpg > /dev/null
-    echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
-    http://ppa.launchpad.net/agornostal/ulauncher/ubuntu jammy main" \
-    | sudo tee /etc/apt/sources.list.d/ulauncher-jammy.list
-    sudo apt update && sudo apt install ulauncher
-    ```
-    lembre-se de sempre deixar ele em autostart.
+ ```bash
+ sudo apt update && sudo apt install -y gnupg
+ gpg --keyserver keyserver.ubuntu.com --recv 0xfaf1020699503176
+ gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive-keyring.gpg > /dev/null
+ echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
+ http://ppa.launchpad.net/agornostal/ulauncher/ubuntu jammy main" \
+ | sudo tee /etc/apt/sources.list.d/ulauncher-jammy.list
+ sudo apt update && sudo apt install ulauncher
+ ```
+ lembre-se de sempre deixar ele em autostart.
 
 ### Principais apps (APT) - Debian
-    ```bash
-    sudo apt install ranger fastfetch flameshot  -y
-    ```
-    <details> <summary> <h2> Github CLI (Cliente do github no terminal) - Debian  </summary> 
+ ```bash
+ sudo apt install ranger fastfetch flameshot  -y
+ ```
+ <details> <summary> <h2> Github CLI (Cliente do github no terminal) - Debian  </summary> 
 
 #### Instalar o Gh
-    ```bash
-    sudo apt install gh -y 
-    ```
+ ```bash
+ sudo apt install gh -y 
+ ```
 #### Login fazer o login, usando o browser.
-    ```bash
-    gh auth login 
-    ```
+ ```bash
+ gh auth login 
+ ```
 
 #### Clonar um repositório dentro de uma pasta.
-    ```bash
-    gh repo clone usuario/repositorio 
-    ```
+ ```bash
+ gh repo clone usuario/repositorio 
+ ```
 
 #### Checar alterações 
-    ```bash
-    git status
-    ```
+ ```bash
+ git status
+ ```
 
 #### + Adicionar alterções 
-    Adicionar tudo:
-    ```bash
-    git add .
-    ```
-    Adicionar arquivo especíico:
-    ```bash
-    git add exemplo.txt 
-    ```
+ Adicionar tudo:
+ ```bash
+ git add .
+ ```
+ Adicionar arquivo especíico:
+ ```bash
+ git add exemplo.txt 
+ ```
 
 #### 💬 Commit
-    ```bash
-    git commit -m "mensagem"
-    ```
+ ```bash
+ git commit -m "mensagem"
+ ```
 
 #### Push (enviar para o Github)
-    ```bash
-    git push
-    ```
-    caso seja o primeiro push de uma branch:
-    ```bash
-    git push -u origin nome-da-branch
-    ```
+ ```bash
+ git push
+ ```
+ caso seja o primeiro push de uma branch:
+ ```bash
+ git push -u origin nome-da-branch
+ ```
 
 #### Pull (puxar alterações do Github)
+   ```bash
+   git pull
+   ```
+   </details>
+
+   <details> <summary> <h2> Vscode - Debian  </summary>
+
+### Vscode (repositorio Oficial)
     ```bash
-    git pull
+    sudo apt install wget gpg -y
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
+    https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+    rm -f packages.microsoft.gpg
+    sudo apt update
+    sudo apt install code -y
     ```
-    </details>
 
-    <details> <summary> <h2> Vscode - Debian  </summary>
+## Vscode (Extensões)
+    ```bash
+    code --install-extension ms-vscode.cpptools
+    code --install-extension ms-vscode.cpptools-extension-pack
+    code --install-extension franneck94.c-cpp-runner
+    code --install-extension ms-vscode.cmake-tools
+    code --install-extension ecmel.vscode-html-css
+    code --install-extension ritwickdey.liveserver
+    code --install-extension enkia.tokyo-night
+    code --install-extension bmewburn.vscode-intelephense-clie  
+    code --disable-extension GitHub.copilot
+    code --disable-extension @builtin php
+    ```
+</details>
 
-      ### Vscode (repositorio Oficial)
-      ```bash
-          sudo apt install wget gpg -y
-          wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-          sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-          sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
-          https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-          rm -f packages.microsoft.gpg
-          sudo apt update
-          sudo apt install code -y
-      ```
+### Java (OpenJDK completo)
+    ```bash
+    sudo apt install default-jdk -y
+    ```
 
-      ## Vscode (Extensões)
-      ```bash
-      code --install-extension ms-vscode.cpptools
-      code --install-extension ms-vscode.cpptools-extension-pack
-      code --install-extension franneck94.c-cpp-runner
-      code --install-extension ms-vscode.cmake-tools
-      code --install-extension ecmel.vscode-html-css
-      code --install-extension ritwickdey.liveserver
-      code --install-extension enkia.tokyo-night
-      code --install-extension bmewburn.vscode-intelephense-clie  
-      code --disable-extension GitHub.copilot
-      code --disable-extension @builtin php
-      ```
-      </details>
-
-      ### Java (OpenJDK completo)
-       ```bash
-       sudo apt install default-jdk -y
-       ```
-
-      ### C/C++ 
+ ### C/C++ 
       ```bash
       sudo apt install build-essential gdb -y
       ```
 
-      ### Python 
+### Python 
       ```bash
       sudo apt install python3 python3-pip python3-venv python3-dev build-essential -y
       ```
-      <details> <summary> <h2> PHP - Debian  </summary>
+<details> <summary> <h2> PHP - Debian  </summary>
 
-      ### PHP (LAMP)
+### PHP (LAMP)
       ```bash
       sudo apt update
       sudo apt install -y apache2 php php-mysql php-mbstring php-zip php-gd php-json php-curl mariadb-server phpmyadmin
@@ -196,7 +196,7 @@
       sudo chmod 777 /var/www/html
       ```
 
-      ### PHPmyAdmin 
+### PHPmyAdmin 
       ```bash
       sudo systemctl stop mariadb
       sudo pkill -9 mysql
@@ -216,21 +216,21 @@
       sudo systemctl restart apache2
       ```
 
-      ### Composer (Gereciador de dependecias do PHP)
+### Composer (Gereciador de dependecias do PHP)
       ```bash
       sudo apt install composer -y
       ```
 
-      </details>
+</details>
 
-      <details> <summary> <h2> PostgreSQL - Debian  </summary>
+<details> <summary> <h2> PostgreSQL - Debian  </summary>
 
-      ### PostgreSQL 
+### PostgreSQL 
       ```bash
       sudo apt install postgresql -y
       ```
 
-      ### PGadmin
+### PGadmin
       ```bash
       curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
       sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
@@ -238,11 +238,11 @@
       sudo apt install pgadmin4
       ```
 
-      </details>
+</details>
 
-      <details> <Summary> <h2> Editores de Codigo </h2> </Summary> 
+<details> <Summary> <h2> Editores de Codigo </h2> </Summary> 
 
-      ### Nvim 
+### Nvim 
 
       ```bash
       curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
@@ -261,45 +261,44 @@
       ```
     instalação dos servidores, de C, lua, Python, HTML, bash,e JS    
 
-      ```bash
-        
+    ```bash    
     :MasonInstall clangd cmake-language-server lua-language-server pyright black djlint html-lsp css-lsp tailwindcss-language-server emmet-ls bash-language-server jdtls phpactor intelephense vue-language-server volar typescript-language-server eslint-lsp
-      ```
+    ```
 
-      ### Geany (IDE)
+### Geany (IDE)
       ```bash
       sudo apt install geany -y
       ```
 
-      ### Micro (Text Editor)
+### Micro (Text Editor)
       ```bash
       sudo apt install micro -y
       ```
-      </details>
+</details>
 
-    <details> <summary> <h2> Jogos (principais launchers) - Debian </summary>
+<details> <summary> <h2> Jogos (principais launchers) - Debian </summary>
 
-      ### Steam (ativa os repositorios non-free e baixa steam)
+### Steam (ativa os repositorios non-free e baixa steam)
       ```bash
       sudo dpkg --add-architecture i386
       sudo apt update
       sudo apt install steam -y
       ```
-      ### Heroic Laucher (epic games)
+### Heroic Laucher (epic games)
       ```bash
       flatpak install flathub com.heroicgameslauncher.hgl
       sudo reboot
       ```
-      ### Minecraft (prism Launcher)
+### Minecraft (prism Launcher)
       ```bash
       flatpak install flathub org.prismlauncher.PrismLauncher
       ```
-      ### Roblox (Sober)
+### Roblox (Sober)
       ```bash
       flatpak install flathub org.vinegarhq.Sober
       ```
 
-    </details>
+</details>
 
 
 # OpenSuse 🦎 
