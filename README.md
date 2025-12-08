@@ -176,67 +176,67 @@ Este repositório é uma coleção de configurações que utilizo no meu computa
     sudo apt install default-jdk -y
     ```
 
- ### C/C++ 
-      ```bash
-      sudo apt install build-essential gdb -y
-      ```
+### C/C++ 
+    ```bash
+    sudo apt install build-essential gdb -y
+    ```
 
 ### Python 
-      ```bash
-      sudo apt install python3 python3-pip python3-venv python3-dev build-essential -y
-      ```
+    ```bash
+    sudo apt install python3 python3-pip python3-venv python3-dev build-essential -y
+    ```
 <details> <summary> <h2> PHP - Debian  </summary>
 
 ### PHP (LAMP)
-      ```bash
-      sudo apt update
-      sudo apt install -y apache2 php php-mysql php-mbstring php-zip php-gd php-json php-curl mariadb-server phpmyadmin
-      sudo phpenmod mbstring
-      sudo systemctl restart apache2
-      sudo chmod 777 /var/www/html
-      ```
+    ```bash
+    sudo apt update
+    sudo apt install -y apache2 php php-mysql php-mbstring php-zip php-gd php-json php-curl mariadb-server phpmyadmin
+    sudo phpenmod mbstring
+    sudo systemctl restart apache2
+    sudo chmod 777 /var/www/html
+    ```
 
 ### PHPmyAdmin 
-      ```bash
-      sudo systemctl stop mariadb
-      sudo pkill -9 mysql
-      sudo pkill -9 mariadb
-      sudo mysqld_safe --skip-grant-tables --skip-networking &
-      sleep 5
-      mysql -u root <<EOF
-      FLUSH PRIVILEGES;
-      UPDATE mysql.user SET password = PASSWORD('bancodedados') WHERE user='root' AND host='localhost';
-      UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE user='root' AND host='localhost';
-      FLUSH PRIVILEGES;
-      EOF
-      sudo pkill -f mysqld
-      sudo systemctl start mariadb
-      sudo sed -i "/auth_type/c\$cfg['Servers'][\$i]['auth_type'] = 'cookie';" /etc/phpmyadmin/config.inc.php
-      sudo sed -i "/Servers\]\[\$i\]\['auth_type'\]/a \$cfg['Servers'][\$i]['AllowRoot'] = true;" /etc/phpmyadmin/config.inc.php
-      sudo systemctl restart apache2
-      ```
+    ```bash
+    sudo systemctl stop mariadb
+    sudo pkill -9 mysql
+    sudo pkill -9 mariadb
+    sudo mysqld_safe --skip-grant-tables --skip-networking &
+    sleep 5
+    mysql -u root <<EOF
+    FLUSH PRIVILEGES;
+    UPDATE mysql.user SET password = PASSWORD('bancodedados') WHERE user='root' AND host='localhost';
+    UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE user='root' AND host='localhost';
+    FLUSH PRIVILEGES;
+    EOF
+    sudo pkill -f mysqld
+    sudo systemctl start mariadb
+    sudo sed -i "/auth_type/c\$cfg['Servers'][\$i]['auth_type'] = 'cookie';" /etc/phpmyadmin/config.inc.php
+    sudo sed -i "/Servers\]\[\$i\]\['auth_type'\]/a \$cfg['Servers'][\$i]['AllowRoot'] = true;" /etc/phpmyadmin/config.inc.php
+    sudo systemctl restart apache2
+    ```
 
 ### Composer (Gereciador de dependecias do PHP)
-      ```bash
-      sudo apt install composer -y
-      ```
+    ```bash
+    sudo apt install composer -y
+    ```
 
 </details>
 
 <details> <summary> <h2> PostgreSQL - Debian  </summary>
 
 ### PostgreSQL 
-      ```bash
-      sudo apt install postgresql -y
-      ```
+    ```bash
+    sudo apt install postgresql -y
+    ```
 
 ### PGadmin
-      ```bash
-      curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
-      sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
-      sudo apt update
-      sudo apt install pgadmin4
-      ```
+    ```bash
+    curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
+    sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
+    sudo apt update
+    sudo apt install pgadmin4
+    ```
 
 </details>
 
@@ -244,21 +244,22 @@ Este repositório é uma coleção de configurações que utilizo no meu computa
 
 ### Nvim 
 
-      ```bash
-      curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-      sudo rm -rf /opt/nvim-linux-x86_64
-      sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-      rm nvim-linux-x86_64.tar.gz
-      echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
-      source ~/.bashrc
-      
-      mkdir -p ~/.local/share/fonts
-      cd ~/.local/share/fonts
-      wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-      unzip JetBrainsMono.zip
-      rm JetBrainsMono.zip
-      fc-cache -fv
-      ```
+    ```bash
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+    sudo rm -rf /opt/nvim-linux-x86_64
+    sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+    rm nvim-linux-x86_64.tar.gz
+    echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
+    source ~/.bashrc
+    
+    mkdir -p ~/.local/share/fonts
+    cd ~/.local/share/fonts
+    wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+    unzip JetBrainsMono.zip
+    rm JetBrainsMono.zip
+    fc-cache -fv
+    ```
+
     instalação dos servidores, de C, lua, Python, HTML, bash,e JS    
 
     ```bash    
@@ -266,37 +267,39 @@ Este repositório é uma coleção de configurações que utilizo no meu computa
     ```
 
 ### Geany (IDE)
-      ```bash
-      sudo apt install geany -y
-      ```
+    ```bash
+    sudo apt install geany -y
+    ```
 
 ### Micro (Text Editor)
-      ```bash
-      sudo apt install micro -y
-      ```
+    ```bash
+    sudo apt install micro -y
+    ```
+
 </details>
 
 <details> <summary> <h2> Jogos (principais launchers) - Debian </summary>
 
 ### Steam (ativa os repositorios non-free e baixa steam)
-      ```bash
-      sudo dpkg --add-architecture i386
-      sudo apt update
-      sudo apt install steam -y
-      ```
+    ```bash
+    sudo dpkg --add-architecture i386
+    sudo apt update
+    sudo apt install steam -y
+    ```
 ### Heroic Laucher (epic games)
-      ```bash
-      flatpak install flathub com.heroicgameslauncher.hgl
-      sudo reboot
-      ```
+    ```bash
+    flatpak install flathub com.heroicgameslauncher.hgl
+    sudo reboot
+    ```
 ### Minecraft (prism Launcher)
-      ```bash
-      flatpak install flathub org.prismlauncher.PrismLauncher
-      ```
+    ```bash
+    flatpak install flathub org.prismlauncher.PrismLauncher
+    ```
+
 ### Roblox (Sober)
-      ```bash
-      flatpak install flathub org.vinegarhq.Sober
-      ```
+    ```bash
+    flatpak install flathub org.vinegarhq.Sober
+    ```
 
 </details>
 
@@ -315,6 +318,7 @@ Este repositório é uma coleção de configurações que utilizo no meu computa
     sudo zypper install flatpak gnome-software-plugin-flatpak -y
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     ```
+    
 ### Ulaucher(Flatpack) - OpenSuse
     ```bash
     flatpak install flathub com.ulauncher.Ulauncher -y
