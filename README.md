@@ -260,8 +260,6 @@ rm JetBrainsMono.zip
 fc-cache -fv
 ```
 
-instalação dos servidores, de C, lua, Python, HTML, bash,e JS    
-
 ```bash    
 :MasonInstall clangd cmake-language-server lua-language-server pyright black djlint html-lsp css-lsp tailwindcss-language-server emmet-ls bash-language-server jdtls phpactor intelephense vue-language-server volar typescript-language-server eslint-lsp
 ```
