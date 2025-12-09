@@ -48,5 +48,8 @@ lspconfig.lua_ls.setup({
   },
 })
 
+-- Vue
+lspconfig.volar.setup({})
+
 -- Java
 lspconfig.jdtls.setup({})
