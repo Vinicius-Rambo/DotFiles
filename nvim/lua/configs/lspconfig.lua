@@ -1,31 +1,25 @@
--- NVChad defaults
+-- NVChad defaults (mantém)
 require("nvchad.configs.lspconfig").defaults()
 
--- Servidores de C, Python, HTML, CSS, PHP, bash, Lua, TS
+-- Lista de servidores (SEM volar)
 local servers = {
-  "clangd",
-  "cmake",
-  "pyright",
-  "html",
-  "cssls",
-  "emmet_ls",
-  "tailwindcss",
-  "bashls",
-  "lua_ls",
-  "ts_ls",
-  "volar",
-  "phpactor",
-  "intelephense",
-  "jdtls",
+  clangd = {},
+  cmake = {},
+  pyright = {},
+  html = {},
+  cssls = {},
+  tailwindcss = {},
+  bashls = {},
+  lua_ls = {},
+  ts_ls = {},
+  phpactor = {},
+  intelephense = {},
+  jdtls = {},
+  vue_ls = {}, -- substitui volar
 }
 
-vim.lsp.enable(servers)
-
--- Configurações extras
-local lspconfig = require("lspconfig")
-
--- Emmet dentro de PHP/JS/TS/HTML
-lspconfig.emmet_ls.setup({
+-- Emmet (config específica)
+servers.emmet_ls = {
   filetypes = {
     "html",
     "css",
@@ -36,20 +30,22 @@ lspconfig.emmet_ls.setup({
     "blade",
     "vue",
   },
-})
+}
 
 -- Lua (Neovim)
-lspconfig.lua_ls.setup({
+servers.lua_ls = {
   settings = {
     Lua = {
       diagnostics = { globals = { "vim" } },
-      workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+      workspace = {
+        checkThirdParty = false,
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
     },
   },
-})
+}
 
--- Vue
-lspconfig.volar.setup({})
-
--- Java
-lspconfig.jdtls.setup({})
+-- Aplica configs usando a API nova
+for server, config in pairs(servers) do
+  vim.lsp.config(server, config)
+end
