@@ -179,7 +179,6 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 fisher install PatrickF1/fzf.fish
 fisher install IlanCosman/tide@v6
 ```
-
 para configurar a aparencia do mesmo:
 ```bash
 tide configure
@@ -187,8 +186,8 @@ tide configure
 
 ### Melhora dos Comandos:
 
-#### eza
-Substituito do ls 
+#### Eza (substituito do ls) 
+ 
 ```bash
 sudo apt install eza
 cat << 'EOF' >> ~/.config/fish/config.fish
@@ -200,12 +199,10 @@ EOF
 source ~/.config/fish/config.fish
 ```
 
-Substituito do cat 
-#### Batcat
+#### Batcat (substituito do cat)
 ```bash
 sudo apt install batcat
 ```
-
 
 ### Java (OpenJDK completo)
 ```bash
