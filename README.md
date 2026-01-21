@@ -171,6 +171,42 @@ code --disable-extension @builtin php
 ```
 </details>
 
+### Fish (Shell interativo)
+```bash
+sudo apt install fish
+chsh -s /usr/bin/fish
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+fisher install PatrickF1/fzf.fish
+fisher install IlanCosman/tide@v6
+```
+
+para configurar a aparencia do mesmo:
+```bash
+tide configure
+```
+
+### Melhora dos Comandos:
+
+#### eza
+Substituito do ls 
+```bash
+sudo apt install eza
+cat << 'EOF' >> ~/.config/fish/config.fish
+alias ls="eza --icons --group-directories-first"
+alias ll="eza -lh --icons --group-directories-first"
+alias la="eza -lah --icons --group-directories-first"
+alias tree="eza --tree --icons"
+EOF
+source ~/.config/fish/config.fish
+```
+
+Substituito do cat 
+#### Batcat
+```bash
+sudo apt install batcat
+```
+
+
 ### Java (OpenJDK completo)
 ```bash
 sudo apt install default-jdk -y
